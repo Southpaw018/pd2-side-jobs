@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Challenges
+</title><link href="Challenges_files/css.css" rel="stylesheet" type="text/css">
+	<script src="Challenges_files/jquery.js"></script>
+    <script src="Challenges_files/challenges.js"></script>
+    <style>
+        .cellstyle
+        {
+            border:1px solid;
+            padding:5px;
+        }
+    </style>
+<script>try {  for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){    var lastpass_f = document.forms[lastpass_iter];    if(typeof(lastpass_f.lpsubmitorig)=="undefined"){      if (typeof(lastpass_f.submit) == "function") {        lastpass_f.lpsubmitorig = lastpass_f.submit;        lastpass_f.submit = function(){          var form = this;          try {            if (document.documentElement && 'createEvent' in document)            {              var forms = document.getElementsByTagName('form');              for (var i=0 ; i<forms.length ; ++i)                if (forms[i]==form)                {                  var element = document.createElement('lpformsubmitdataelement');                  element.setAttribute('formnum',i);                  element.setAttribute('from','submithook');                  document.documentElement.appendChild(element);                  var evt = document.createEvent('Events');                  evt.initEvent('lpformsubmit',true,false);                  element.dispatchEvent(evt);                  break;                }            }          } catch (e) {}          try {            form.lpsubmitorig();          } catch (e) {}        }      }    }  }} catch (e) {}</script></head>
+<body style="background-color:#333333; color:#eeeeee;">
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="a08SvKy1p2Rim281K3aCzW19MLCmBBXGxSucl0cLzFnC4rAD0JrbOUgEJKKv/LxE7eDpTrZ3MNl6vk8ugRhJ6Ob02C5tMPHeqYGHAUAWxuc=" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3CBF6266" type="hidden">
+</div>
+    <div style="font-family:Lato;">
+        <table style="border:1px solid black;border-collapse:collapse;">
+            <tbody><tr>
+                <th class="cellstyle">Period</th>
+                <th class="cellstyle">Achievement</th>
+                <th class="cellstyle">Description</th>
+                <th class="cellstyle">&nbsp;</th>
+            </tr>
+            <tr>
+                <th class="cellstyle">Daily</th>
+                <td class="cellstyle"><span id="dailyName"></span></td>
+                <td class="cellstyle"><span id="dailyDescription"></span></td>
+                <td class="cellstyle"><img id="dailyImage"></td>
+            </tr>
+            <tr>
+                <th class="cellstyle">Weekly</th>
+                <td class="cellstyle"><span id="weeklyName"></span></td>
+                <td class="cellstyle"><span id="weeklyDescription"></span></td>
+                <td class="cellstyle"><img id="weeklyImage"></td>
+            </tr>
+        </tbody></table>
+        <p id="timeleft">Error loading side jobs from Overkill website, rawdata : []</p>
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var msg = 'Error loading side jobs from Overkill website, rawdata : []';//]]>
+</script>
+</form>
+
+</body></html>
